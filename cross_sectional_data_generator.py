@@ -14,7 +14,7 @@ def generate_cross_sectional_data(num_samples, columns):
         if col_type == "Numeric":
             data[col_name] = generate_numeric_data(num_samples, col["min"], col["max"], col["mean"], col["std_deviation"])
         elif col_type == "Categorical":
-            data[col_name] = generate_categorical_data(num_samples, col["categories"])
+            data[col_name] = generate_categorical_data(num_samples)
         elif col_type == "Geographical":
             data[col_name] = generate_geographical_data(num_samples)
 

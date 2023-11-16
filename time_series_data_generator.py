@@ -1,5 +1,7 @@
 from faker import Faker
 import pandas as pd
+from numeric_data_generator import generate_numeric_data
+from categorical_data_generator import generate_categorical_data
 
 def generate_time_series_data(num_time_points, columns):
     data = {}
