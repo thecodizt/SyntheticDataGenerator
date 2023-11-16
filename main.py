@@ -100,10 +100,7 @@ def main():
                                     "seasonality": {"amplitude": amplitude, "frequency": frequency},
                                     "trend": {"slope": slope}})
                 elif column_type == "Categorical":
-                    # Get categories for categorical columns
-                    categories = st.text_area(f"Enter categories for {column_name} (comma-separated):", key=f"categories_{i}_{j}")
-                    categories_list = [cat.strip() for cat in categories.split(",")]
-                    columns.append({"name": column_name, "type": column_type, "foreign_key": None, "categories": categories_list})
+                    columns.append({"name": column_name, "type": column_type, "foreign_key": None})
                 elif column_type == "Geographical":
                     columns.append({"name": column_name, "type": column_type, "foreign_key": None})
                 else:

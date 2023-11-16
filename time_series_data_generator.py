@@ -29,7 +29,7 @@ def generate_time_series_data(num_time_points, columns, start_date=None, end_dat
             else:
                 data[col_name] = generate_numeric_data(num_time_points, col["min"], col["max"], col["mean"], col["std_deviation"])
         elif col_type == "Categorical":
-            data[col_name] = generate_categorical_data(num_time_points, col["categories"])
+            data[col_name] = generate_categorical_data(num_time_points)
 
     return pd.DataFrame(data)
 
